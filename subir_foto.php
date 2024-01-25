@@ -1,10 +1,14 @@
 <?php
 
 require 'funciones.php';
+
 $conexion = conexion('galeria_practica', 'root', '');
+var_dump($conexion);
+// die();
 
 if (!$conexion) {
     // header('Location: index.php');
+    echo 'no hay conexion';
     die();
 }
 

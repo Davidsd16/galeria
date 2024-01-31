@@ -5,7 +5,8 @@ require 'funciones.php';
 $conexion = conexion('galeria_practica', 'root', '');
 
 if (!$conexion) {
-    die();
+    header('Location: error.php');
+    exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
